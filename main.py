@@ -56,6 +56,7 @@ def upload():
 @jwt_required()
 def index4():
     url_params = request.args
+    url = https://backoffice-comprimemelo-app-imm52zicba-uc.a.run.app
 
     # Retrieve parameters which are present
     format = url_params['format']
