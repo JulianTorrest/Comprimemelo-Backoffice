@@ -56,7 +56,10 @@ def upload():
 @jwt_required()
 def index4():
     url_params = request.args
-    url = https://backoffice-comprimemelo-app-imm52zicba-uc.a.run.app
+    # URL para la aplicación Flask en Cloud Run
+    APPLICATION_URL = "https://crunbuid-webappcomprimemelo-imm52zicba-uc.a.run.app"
+    # URL para Cloud Endpoint en Cloud Run
+    ENDPOINT_HOST = "https://backoffice-comprimemelo-app-imm52zicba-uc.a.run.app"
 
     # Retrieve parameters which are present
     format = url_params['format']
