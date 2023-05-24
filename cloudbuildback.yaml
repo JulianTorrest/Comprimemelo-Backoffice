@@ -3,14 +3,14 @@ steps:
   entrypoint: 'bash'
   args: ['-c','docker build --no-cache -t gcr.io/datacompressionprojectfjc/cloud-run-backoffice-comprimemelo .']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/datacompressionprojectfjc/comprimemelo_app']
+  args: ['push','gcr.io/datacompressionprojectfjc/cloud-run-backoffice-comprimemelo']
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - 'beta'
     - 'run'
     - 'deploy'
     - 'backoffice-comprimemelo-app'
-    - '--image=gcr.io/datacompressionprojectfjc/comprimemelo_app'
+    - '--image=gcr.io/datacompressionprojectfjc/cloud-run-backoffice-comprimemelo'
     - '--region=us-central1'
     - '--platform=managed'
     - '--port=3000'
