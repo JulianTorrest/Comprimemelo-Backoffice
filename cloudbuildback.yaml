@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders-back/docker'
   entrypoint: 'bash'
   args: ['-c','docker build --no-cache -t gcr.io/datacompressionprojectfjc/comprimemelo_app .']
 - name: 'gcr.io/cloud-builders/docker'
