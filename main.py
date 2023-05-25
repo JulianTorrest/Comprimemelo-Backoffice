@@ -19,6 +19,9 @@ from flask import copy_current_request_context
 import os
 import getpass
 from celery import Celery
+from google.cloud import storage
+from google.cloud.storage import Blob
+
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -59,7 +62,7 @@ def index4():
     # URL para la aplicación Flask en Cloud Run
     APPLICATION_URL = "https://crunbuid-webappcomprimemelo-imm52zicba-uc.a.run.app"
     # URL para Cloud Endpoint en Cloud Run
-    ENDPOINT_HOST = "https://backoffice-comprimemelo-app-imm52zicba-uc.a.run.app"
+    ENDPOINT_HOST = "https://cloud-run-backoffice-comprimemelo-imm52zicba-uc.a.run.app"
 
     # Retrieve parameters which are present
     format = url_params['format']
