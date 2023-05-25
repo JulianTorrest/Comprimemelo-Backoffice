@@ -13,4 +13,4 @@ steps:
     - '--image=gcr.io/datacompressionprojectfjc/cloud-run-backoffice-comprimemelo'
     - '--region=us-central1'
     - '--platform=managed'
-    - '--port=3000'
+    - '--port=4000'
