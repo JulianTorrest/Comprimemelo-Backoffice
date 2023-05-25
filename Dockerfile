@@ -20,6 +20,8 @@ RUN pip3 install Flask gunicorn
 
 RUN pip install --upgrade flask_login
 
+RUN pip3 install google-cloud-storagee
+
 ENV PORT=8080
 
 EXPOSE 8080
