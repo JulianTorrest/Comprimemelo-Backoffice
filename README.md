@@ -1,25 +1,18 @@
-Entrega 4 -ESCALABILIDAD DISEÑO E IMPLEMENTACIÓN DE UNA APLICACIÓN WEB ESCALABLE EN NUBE PÚBLICA 
+ENTREGA 5 - DESPLIEGUE EN PAAS MIGRACIÓN DE UNA APLICACIÓN WEB A UN PLATAFORMA COMO SERVICIO EN LA NUBE PÚBLICA
 
+Grupo 3 C. Camilo Baquero Gómez, Julian Torres, Franklin A. Pinto Carreño. Desarrollo de Aplicaciones Cloud Universidad de los Andes, Bogotá, Colombia c.baquero@uniandes.edu.co, jy.torres@uniandes.edu.co, f.pintoc@uniandes.edu.co Fecha de presentación: MAYO 28 de 2023
 
+LINK APLICACIÓN WEB: https://crunbuid-webappcomprimemelo-imm52zicba-uc.a.run.app/
 
-Grupo 3
-C. Camilo Baquero Gómez, Julian Torres, Franklin A. Pinto Carreño.
-Desarrollo de Aplicaciones Cloud
-Universidad de los Andes, Bogotá, Colombia
-c.baquero@uniandes.edu.co, jy.torres@uniandes.edu.co, f.pintoc@uniandes.edu.co
-Fecha de presentación: MAYO 7 de 2023
+DOCUMENTACION: PDF SE ENCUENTRA EN ESTE REPO, TAMBIEN SE AGREGA EL LINK DE GOOGLE DOCS LINK DOCUMENTACION: https://docs.google.com/document/d/1XbAUU5gHYglkhpxJkbMXi2dZKJh7kqwLklSaWgL0VTw (PDF EN EL REPO DE GITHUB)
 
-LINK APLICACIÓN WEB: http://comprimemelo.com:5000/
+La aplicación web de compresión de archivos se encuentra implementada bajo el modelo desacoplamiento utilizando una instancia web que se encarga de desplegar el front en un compute engine, y procesar los archivos de compresión en un Worker comunicado mediante una cola de Pubsub, el front y un worker que procesa la compresión de archivos.
 
-DOCUMENTACION: PDF SE ENCUENTRA EN ESTE REPO, TAMBIEN SE AGREGA EL LINK DE GOOGLE DOCS
-LINK DOCUMENTACION: https://docs.google.com/document/d/1XbAUU5gHYglkhpxJkbMXi2dZKJh7kqwLklSaWgL0VTw (PDF EN EL REPO DE GITHUB) 
-
-
-La aplicación web de compresión de archivos se encuentra implementada bajo el modelo desacoplamiento utilizando una instancia web que se encarga de desplegar el front en un compute engine, y procesar los archivos de compresión en un Worker comunicado mediante una cola de Pubsub, el front y un worker que procesa la compresión de archivos. 
-
-Cuando el server web  o worker supera un uso de cpu en un 60% se activa la regla de autoscaling y despliega un nodo adicional y lo agrega al Balanceador de Carga. El modelo implementa un conjunto de métodos para crear, modificar, eliminar, consultar, comprimir y descomprimir archivos y tiene acceso directo al motor de persistencia.
+Cuando el server web o worker supera un uso de cpu en un 60% se activa la regla de autoscaling y despliega un nodo adicional y lo agrega al Balanceador de Carga. El modelo implementa un conjunto de métodos para crear, modificar, eliminar, consultar, comprimir y descomprimir archivos y tiene acceso directo al motor de persistencia.
 
 La vista está implementada en formato html para los formularios y páginas de presentación en capa web, y para las api rest, se utiliza el formato json, para capturar y responder las peticiones web. El controlador es el intermediario entre el modelo y la vista para interpretar las peticiones y entregar una respuesta a cada petición web realizada por un usuario.
+
+
 
 
 
